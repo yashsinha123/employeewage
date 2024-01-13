@@ -11,7 +11,6 @@ echo "absent"
 fi
 
 
-
 dailyEmployeewage=$(($wageperHour * $fulldayHour))
 echo $dailyEmployeewage
 
