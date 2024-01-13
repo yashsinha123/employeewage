@@ -1,3 +1,6 @@
+
+wageperHour=20
+fulldayHour=8
 isPresent=1
 checkAttendance=$((RANDOM%2))
 if [ $isPresent -eq $checkAttendance ]
@@ -6,6 +9,13 @@ echo "employee is present"
 else
 echo "absent"
 fi
+
+
+
+dailyEmployeewage=$(($wageperHour * $fulldayHour))
+echo $dailyEmployeewage
+
+
 
 
 
