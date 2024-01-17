@@ -1,29 +1,23 @@
-
+totalHour1=100
+totalDays2=20
+currday=0
+currhr=1
 wageperHour=20
 fulldayHour=8
-isPresent=1
-checkAttendance=$((RANDOM%2))
-case $checkAttendance in
-  $isPresent)
-    echo "Employee is present"
-    dailyEmployeewage=$(($wageperHour * $fulldayHour))
-    echo "Daily Employee wage: $dailyEmployeewage"
-    ;;
+finalwage=0
+parttimehour=8
+while [[ $currday -le $totalDays2 && $currhr -le $totalHour1 ]]
+do
+ dailywage=$(($wageperHour * $fulldayHour))
+ echo " daily wage of user is : $dailywage"
+ parttimewage=$(($parttimehour * $wageperHour))
+ echo "partime employee wage is : $parttimewage"
 
-  *)
-    echo "Employee is absent"
-    ;;
-esac
-
-
-parttimeHour=8
-Parttimetotalwage=$(($parttimeHour * $wageperHour))
-echo "partime employee is present with wage: $Parttimetotalwage "
-totalWorkdays=20
-Monthlywage=$(($totalWorkdays * $fulldayHour * $wageperHour))
-echo " monthly wage of a user is : $Monthlywage"
-
-
+ currday=$(($currday + 1))
+ currhr=$(($currhr + $fulldayHour))
+done
+monthlywage=$(($wageperHour * $totalDays2 * $fulldayHour))
+echo "monthly wage is : $monthlywage"
 
 
 
