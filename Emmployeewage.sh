@@ -14,6 +14,12 @@ fi
 dailyEmployeewage=$(($wageperHour * $fulldayHour))
 echo $dailyEmployeewage
 
+parttimeHour=8
+Parttimetotalwage=$(($parttimeHour * $wageperHour))
+echo "partime employee is present with wage  $Parttimetotalwage "
+
+
+
 
 
 
